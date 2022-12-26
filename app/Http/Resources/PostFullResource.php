@@ -19,7 +19,8 @@ class PostFullResource extends JsonResource
             'cover_url' => $this->cover_url,
             'title' => $this->title,
             'content' => $this->content,
-            'name' => UserResource::make($this->user),
+            // 'name' => UserResource::make($this->user),
+            'name' => $this->user->name,
             'description' => $this->description,
             'created_at' => $this->created_at,
         ];

@@ -11,12 +11,12 @@ use Illuminate\Http\Request;
 use Illuminate\Contracts\Database\Eloquent\Builder;
 
 
-
+// publish
 class PostController extends Controller
 {
     public function getPosts() 
     {
-        $posts = Post::orderBy('created_at','desc')->where('status','publish')->get();
+        $posts = Post::orderBy('created_at','desc')->where('status','on-check')->get();
 
         return PostResource::collection($posts);
             

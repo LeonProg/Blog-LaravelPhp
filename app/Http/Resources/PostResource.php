@@ -18,7 +18,8 @@ class PostResource extends JsonResource
             'id' => $this->id,
             'cover_url' => $this->cover_url,
             'title' => $this->title,
-            'name' => UserResource::make($this->user),
+            // 'name' => UserResource::make($this->user),
+            'name' => $this->user->name,
             'description' => $this->description,
             'created_at' => $this->created_at,
         ];
